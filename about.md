@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+My name is Chris. I work as a Staff Software Engineer in Australia. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I set up this blog to practice my story-telling. Ideally, it also helps someone avoid my biggest mistakes.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[chris@talkingaboutdoing.com](mailto:chris@talkingaboutdoing.com)
