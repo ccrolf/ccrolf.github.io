@@ -1,15 +1,17 @@
 ---
-layout: page
-title: About
-permalink: /about/
+layout: default
+title: about
 ---
 
-My name is Chris. I work as a Staff Software Engineer in Australia. 
+<div class="page-body">
 
-### More Information
+<h1>about</h1>
 
-I set up this blog to practice my story-telling. Ideally, it also helps someone avoid my biggest mistakes.
+I'm [your name], a software engineer based in [city].
 
-### Contact me
+I write about engineering problems I'm working through and things I'm learning.
+The name comes from the gap between knowing and doing — this is where I close it.
 
-[chris@talkingaboutdoing.com](mailto:chris@talkingaboutdoing.com)
+Get in touch: [your@email.com](mailto:your@email.com)
+
+</div>
