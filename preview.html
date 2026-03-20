@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Preview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; font-family: monospace; display: flex; gap: 0; height: 100vh; overflow: hidden; }
+  .label { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #444; font-family: monospace; background: #111; padding: 2px 8px; border-radius: 3px; pointer-events: none; }
+  .pane { flex: 1; height: 100vh; overflow-y: auto; position: relative; border-right: 1px solid #1a1a1a; }
+  .pane:last-child { border-right: none; }
+  iframe { width: 100%; height: 100%; border: none; }
+</style>
+</head>
+<body>
+
+<!-- INDEX PAGE -->
+<div class="pane">
+  <iframe srcdoc='<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#000;--fg:#e8e8e8;--dim:#666;--link:#fff;--rule:#222;--font:"Courier New",Courier,monospace}
+html{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.7}
+body{max-width:640px;margin:0 auto;padding:48px 20px 80px}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+a:hover{color:var(--dim)}
+nav{margin-bottom:56px}
+nav a{text-decoration:none;color:var(--dim);margin-right:20px;font-size:13px;letter-spacing:.03em}
+nav a:hover{color:var(--fg)}
+nav a.site-title{color:var(--fg);font-size:13px}
+.post-list{list-style:none}
+.post-list li{display:flex;gap:24px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule)}
+.post-list li:first-child{border-top:1px solid var(--rule)}
+.post-date{color:var(--dim);font-size:13px;white-space:nowrap;flex-shrink:0}
+.post-list a{text-decoration:none;font-size:15px}
+.post-list a:hover{text-decoration:underline}
+.subscribe{margin-top:56px;border-top:1px solid var(--rule);padding-top:28px}
+.subscribe p{color:var(--dim);font-size:13px;margin-bottom:12px}
+.subscribe form{display:flex;gap:0}
+.subscribe input[type=email]{flex:1;background:#000;border:1px solid var(--dim);border-right:none;color:var(--fg);font-family:var(--font);font-size:14px;padding:8px 10px;outline:none}
+.subscribe button{background:var(--fg);color:#000;border:1px solid var(--fg);font-family:var(--font);font-size:14px;padding:8px 16px;cursor:pointer;white-space:nowrap}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);font-size:12px;color:var(--dim)}
+footer a{color:var(--dim)}
+</style>
+</head>
+<body>
+<nav>
+  <a class="site-title" href="#">talking about doing</a>
+  <a href="#">about</a>
+  <a href="#">rss</a>
+</nav>
+
+<ul class="post-list">
+  <li><span class="post-date">2024-03-14</span><a href="#">what I got wrong about code review</a></li>
+  <li><span class="post-date">2024-03-02</span><a href="#">debugging with the duck</a></li>
+  <li><span class="post-date">2024-02-18</span><a href="#">on finishing things</a></li>
+  <li><span class="post-date">2024-02-04</span><a href="#">the gap between knowing and doing</a></li>
+  <li><span class="post-date">2024-01-21</span><a href="#">shipping with uncertainty</a></li>
+  <li><span class="post-date">2024-01-07</span><a href="#">what makes a good bug report</a></li>
+  <li><span class="post-date">2024-01-01</span><a href="#">why I started writing</a></li>
+</ul>
+
+<div class="subscribe">
+  <p>new posts by email</p>
+  <form>
+    <input type="email" placeholder="your@email.com">
+    <button type="submit">subscribe</button>
+  </form>
+</div>
+
+<footer>
+  Your Name &mdash; <a href="#">rss</a>
+</footer>
+</body>
+</html>'></iframe>
+</div>
+
+<!-- POST PAGE -->
+<div class="pane">
+  <iframe srcdoc='<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#000;--fg:#e8e8e8;--dim:#666;--link:#fff;--rule:#222;--font:"Courier New",Courier,monospace}
+html{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.7}
+body{max-width:640px;margin:0 auto;padding:48px 20px 80px}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+a:hover{color:var(--dim)}
+nav{margin-bottom:56px}
+nav a{text-decoration:none;color:var(--dim);margin-right:20px;font-size:13px;letter-spacing:.03em}
+nav a.site-title{color:var(--fg);font-size:13px}
+h1{font-size:1.25rem;font-weight:normal;letter-spacing:.02em;margin-bottom:6px}
+h2{font-size:1.1rem;font-weight:normal;margin:2em 0 .6em;border-bottom:1px solid var(--rule);padding-bottom:4px}
+.post-header{margin-bottom:36px;border-bottom:1px solid var(--rule);padding-bottom:20px}
+.post-meta{color:var(--dim);font-size:13px;margin-top:6px}
+.post-body p{margin-bottom:1.2em}
+.post-body ul{margin:0 0 1.2em 2em}
+.post-body li{margin-bottom:.3em}
+.post-body blockquote{border-left:2px solid var(--dim);padding-left:16px;color:var(--dim);margin:1.4em 0}
+code{font-family:var(--font);font-size:.9em;background:#0d0d0d;border:1px solid var(--rule);padding:1px 5px}
+pre{background:#0d0d0d;border:1px solid var(--rule);padding:16px;overflow-x:auto;margin:1.4em 0}
+pre code{background:none;border:none;padding:0;font-size:.88em}
+.subscribe{margin-top:56px;border-top:1px solid var(--rule);padding-top:28px}
+.subscribe p{color:var(--dim);font-size:13px;margin-bottom:12px}
+.subscribe form{display:flex}
+.subscribe input[type=email]{flex:1;background:#000;border:1px solid var(--dim);border-right:none;color:var(--fg);font-family:var(--font);font-size:14px;padding:8px 10px;outline:none}
+.subscribe button{background:var(--fg);color:#000;border:1px solid var(--fg);font-family:var(--font);font-size:14px;padding:8px 16px;cursor:pointer}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);font-size:12px;color:var(--dim)}
+footer a{color:var(--dim)}
+.back{display:inline-block;font-size:13px;color:var(--dim);text-decoration:none;margin-bottom:32px}
+.back:hover{color:var(--fg)}
+</style>
+</head>
+<body>
+<nav>
+  <a class="site-title" href="#">talking about doing</a>
+  <a href="#">about</a>
+  <a href="#">rss</a>
+</nav>
+
+<a class="back" href="#">&larr; all posts</a>
+
+<div class="post-header">
+  <h1>why I started writing</h1>
+  <div class="post-meta">January 1, 2024</div>
+</div>
+
+<div class="post-body">
+  <p>There&rsquo;s a version of understanding that only happens when you have to explain something out loud.</p>
+
+  <p>Rubber duck debugging is the programming version of this &mdash; you describe the problem to an inanimate object and halfway through the sentence you hear yourself say the stupid thing you&rsquo;ve been missing for two hours. The duck doesn&rsquo;t know anything. That&rsquo;s not the point. The point is the act of articulating.</p>
+
+  <p>This blog is the duck.</p>
+
+  <h2>on writing and thinking</h2>
+
+  <p>Most of what I&rsquo;ll write here will be problems I&rsquo;m actively working through. Some of it will be embarrassingly basic. That&rsquo;s fine. The goal isn&rsquo;t to perform competence &mdash; it&rsquo;s to think in public and build the habit of finishing thoughts.</p>
+
+  <blockquote>The gap between knowing and doing is wider than it looks. Writing is one way to cross it.</blockquote>
+
+  <p>If any of it is useful to you, even better.</p>
+
+<pre><code>def understand(thing):
+    return explain(thing)
+    # you learn it here
+    # not in the line above</code></pre>
+</div>
+
+<div class="subscribe">
+  <p>new posts by email</p>
+  <form>
+    <input type="email" placeholder="your@email.com">
+    <button type="submit">subscribe</button>
+  </form>
+</div>
+
+<footer>
+  Your Name &mdash; <a href="#">rss</a>
+</footer>
+</body>
+</html>'></iframe>
+</div>
+
+</body>
+</html>

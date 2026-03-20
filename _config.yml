@@ -1,10 +1,10 @@
 title: "Talking about doing"
 description: "Software engineering and continuous learning."
-url: "https://yourusername.github.io"
+url: "https://talkingaboutdoing.com"
 baseurl: ""
-author: "Your Name"
-email: "you@example.com"
-buttondown_username: "yourbuttondownusername"
+author: "Chris"
+email: "chris@talkingaboutdoing.com"
+buttondown_username: "ccrolf"
 
 markdown: kramdown
 permalink: /:title/
