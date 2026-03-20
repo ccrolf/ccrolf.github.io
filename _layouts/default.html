@@ -1,51 +1,122 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+  {% feed_meta %}
+  {% seo %}
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    {% include meta.html %}
+    :root {
+      --bg:   #000000;
+      --fg:   #e8e8e8;
+      --dim:  #666666;
+      --link: #ffffff;
+      --rule: #222222;
+      --font: "Courier New", Courier, monospace;
+      --width: 640px;
+    }
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    html { background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 15px; line-height: 1.7; }
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    body { max-width: var(--width); margin: 0 auto; padding: 48px 20px 80px; }
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+    a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--dim); }
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    /* ── nav ── */
+    nav { margin-bottom: 56px; }
+    nav a { text-decoration: none; color: var(--dim); margin-right: 20px; font-size: 13px; letter-spacing: 0.03em; }
+    nav a:hover { color: var(--fg); }
+    nav a.site-title { color: var(--fg); font-size: 13px; }
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+    /* ── headings ── */
+    h1 { font-size: 1.25rem; font-weight: normal; letter-spacing: 0.02em; margin-bottom: 6px; }
+    h2 { font-size: 1.1rem;  font-weight: normal; margin: 2em 0 0.6em; }
+    h3 { font-size: 1rem;    font-weight: normal; margin: 1.6em 0 0.4em; }
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+    /* ── post list ── */
+    .post-list { list-style: none; }
+    .post-list li { display: flex; gap: 24px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+    .post-list li:first-child { border-top: 1px solid var(--rule); }
+    .post-date { color: var(--dim); font-size: 13px; white-space: nowrap; flex-shrink: 0; }
+    .post-list a { text-decoration: none; font-size: 15px; }
+    .post-list a:hover { text-decoration: underline; }
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+    /* ── post ── */
+    .post-header { margin-bottom: 36px; border-bottom: 1px solid var(--rule); padding-bottom: 20px; }
+    .post-meta { color: var(--dim); font-size: 13px; margin-top: 6px; }
+    .post-body p  { margin-bottom: 1.2em; }
+    .post-body ul,
+    .post-body ol { margin: 0 0 1.2em 2em; }
+    .post-body li { margin-bottom: 0.3em; }
+    .post-body blockquote { border-left: 2px solid var(--dim); padding-left: 16px; color: var(--dim); margin: 1.4em 0; }
+    .post-body hr { border: none; border-top: 1px solid var(--rule); margin: 2em 0; }
+    .post-body h2 { border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+    /* ── code ── */
+    code { font-family: var(--font); font-size: 0.9em; background: #0d0d0d; border: 1px solid var(--rule); padding: 1px 5px; }
+    pre  { background: #0d0d0d; border: 1px solid var(--rule); padding: 16px; overflow-x: auto; margin: 1.4em 0; }
+    pre code { background: none; border: none; padding: 0; font-size: 0.88em; }
 
-    {% include analytics.html %}
-  </body>
+    /* ── subscribe ── */
+    .subscribe { margin-top: 56px; border-top: 1px solid var(--rule); padding-top: 28px; }
+    .subscribe p { color: var(--dim); font-size: 13px; margin-bottom: 12px; }
+    .subscribe form { display: flex; gap: 0; }
+    .subscribe input[type="email"] {
+      flex: 1; background: #000; border: 1px solid var(--dim); border-right: none;
+      color: var(--fg); font-family: var(--font); font-size: 14px;
+      padding: 8px 10px; outline: none;
+    }
+    .subscribe input[type="email"]:focus { border-color: var(--fg); }
+    .subscribe button {
+      background: var(--fg); color: #000; border: 1px solid var(--fg);
+      font-family: var(--font); font-size: 14px; padding: 8px 16px;
+      cursor: pointer; white-space: nowrap;
+    }
+    .subscribe button:hover { background: var(--dim); border-color: var(--dim); }
+
+    /* ── footer ── */
+    footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--dim); }
+    footer a { color: var(--dim); }
+
+    /* ── back link ── */
+    .back { display: inline-block; font-size: 13px; color: var(--dim); text-decoration: none; margin-bottom: 32px; }
+    .back:hover { color: var(--fg); }
+
+    /* ── page ── */
+    .page-body p { margin-bottom: 1.2em; }
+    .page-body ul { margin: 0 0 1.2em 2em; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="site-title" href="/">{{ site.title }}</a>
+    <a href="/about/">about</a>
+    <a href="/feed.xml">rss</a>
+  </nav>
+
+  {{ content }}
+
+  <div class="subscribe">
+    <p>new posts by email</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown_username }}"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/{{ site.buttondown_username }}', 'popupwindow')">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit">subscribe</button>
+    </form>
+  </div>
+
+  <footer>
+    {{ site.author }} &mdash; <a href="/feed.xml">rss</a>
+  </footer>
+
+</body>
 </html>

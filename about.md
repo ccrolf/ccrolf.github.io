@@ -7,11 +7,12 @@ title: about
 
 <h1>about</h1>
 
-I'm [your name], a software engineer based in [city].
+I'm Chris, a staff software engineer based in Sydney.
 
 I write about engineering problems I'm working through and things I'm learning.
-The name comes from the gap between knowing and doing — this is where I close it.
 
-Get in touch: [your@email.com](mailto:your@email.com)
+The goal of this blog is to improve my story-telling. Hopefully it also helps you avoid some of my worst mistakes.
+
+Get in touch: [chris@talkingaboutdoing.com](mailto:chris@talkingaboutdoing.com)
 
 </div>
