@@ -3,9 +3,8 @@ layout: default
 title: about
 ---
 
-<div class="page-body">
 
-<h1>about</h1>
+<h1>About</h1>
 
 I'm Chris, a staff software engineer based in Sydney.
 
