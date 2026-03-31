@@ -1,15 +1,18 @@
 title: "Talking About Doing"
-description: "A blog about software engineering, continuous learning, and story-telling."
+description: "A blog about challenging problems, unusual perspectives, and continuous learning."
 url: "https://TalkingAboutDoing.com"
 baseurl: ""
 author: "Talking About Doing"
 email: "chris@talkingaboutdoing.com"
 buttondown_username: "ccrolf"
 
+rss: false
+footer-links:
+  rss: false 
+
 markdown: kramdown
 permalink: /:title/
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 exclude:

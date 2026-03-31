@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
-  {% feed_meta %}
   {% seo %}
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -98,7 +97,6 @@
     <a class="site-title" href="/">{{ site.title }}</a>
     <a href="/">home</a>
     <a href="/about/">about</a>
-    <a href="/feed.xml">rss</a>
   </nav>
 
   {{ content }}
