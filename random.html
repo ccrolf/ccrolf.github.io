@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /random
+---
+<script>
+  var posts = [
+    {% for post in site.posts %}
+      "{{ post.url }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  var pick = posts[Math.floor(Math.random() * posts.length)];
+  window.location.replace(pick);
+</script>
