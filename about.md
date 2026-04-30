@@ -6,11 +6,12 @@ title: about
 
 <h1>About</h1>
 
-I'm Chris, I work as a staff software engineer in Australia.<br>
+I'm Chris. Staff software engineer at a large tech company, where I lead developer productivity, AI adoption, and reliability across fifty engineers.  I've spent several years on both sides of that work, as an engineer and as a manager, which is why I write about people as much as systems."
 
-I write about challenging problems, unusual perspectives, and continuous learning.<br><br>
+I write to think clearly. The topics are the ones I spend most of my time on: developer productivity, reliability, performance, and scale.<br><br>
 
-All that's written here is my opinion, not that of my company or anyone else.<br><br>
+Opinions here are mine, not my employer's.<br><br>
 
-If you like what you see, let me know: [Chris@TalkingAboutDoing.com](mailto:chris@talkingaboutdoing.com)
+
+[chris@talkingaboutdoing.com](mailto:chris@talkingaboutdoing.com)
 
