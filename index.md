@@ -11,14 +11,3 @@ layout: default
 {% endfor %}
 </ul>
 
-<div class="subscribe">
-  <p>new posts by email</p>
-  <form
-    action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown_username }}"
-    method="post"
-    target="popupwindow"
-    onsubmit="window.open('https://buttondown.com/{{ site.buttondown_username }}', 'popupwindow')">
-    <input type="email" name="email" placeholder="your@email.com" required>
-    <button type="submit">subscribe</button>
-  </form>
-</div>
