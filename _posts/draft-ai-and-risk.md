@@ -20,7 +20,7 @@ Python and Javascript made startups fast. Dynamic typing and less verbosity acce
 
 The productivity gain from any technology is real. But it's conditional on whether your risk tolerance matches what that technology requires.
 
-Ans AI demands a far risk tolerance than anything before it.
+And AI demands a far risk tolerance than anything before it.
 
 A solo developer working on a hobby project captures the productivity at the extreme risk tolerance. Startups building MVPs can still capture huge gains. But an enterprise with a huge userbase and high reliability commitments struggles to gain much at all.
 
@@ -29,6 +29,7 @@ A solo developer working on a hobby project captures the productivity at the ext
 
 The productivity gain at enterprise scale doesn't come from generating production code faster. It comes from shifting where AI gets used. Using AI for prototyping features with PM, design, and customers in the room eliminates the need for multiple design iterations. Features that previously became great through multiple iterations spanning months can now be validated in a single day.
 
-The organizations that figure this out won't just get productivity gains. They will redefine how modern software teams work across disciplines.
+The productivity gain isn't in writing production code faster. It's in shifting perspective to the customer outcome. Instead of measuring lines of code produced, measure the time from an idea to a happy customer.
 
-That's why the products are missing. They've been delayed by a focus on short-term productivity.
+That's why the products aren't here yet. Nobody has pointed the productivity at the right part of the cycle.
+
