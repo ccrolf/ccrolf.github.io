@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why AI is great for your hobby project and not your product"
+title: "If AI is so productive, where are the products?"
 date: 2026-05-01
 ---
 
