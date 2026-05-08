@@ -4,7 +4,7 @@ title: "Most AI predictions are right"
 date: 2026-05-08
 ---
 
-Imagine you're out walking in the woods. Suddenly you realize you're lost. It's getting dark and you have no idea where you are. At the next fork, the path splits in two, you go left. At the next, it splits in three. The map on your phone doesn't show any paths at all. Through the shrubs, you spot people walking in the distance. Do you cut through the undergrowth, risk getting totally lost, or stick the path you're on?
+Imagine you're out walking in the woods. Suddenly you realize you're lost. It's getting dark and you have no idea where you are. At the next fork, the path splits in two, you go left. At the next, it splits in three. The map on your phone doesn't show any paths at all. Through the shrubs, you spot people walking in the distance. Do you cut through the undergrowth, risk getting totally lost, or stick to the path you're on?
 
 Every company is on a path they chose before they knew where it led. They glimpse how their competitors work, but not clearly. This is the infinite game of capitalism: all companies eventually fail, but some get much further than others.
 
